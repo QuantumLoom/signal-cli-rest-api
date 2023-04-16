@@ -39,7 +39,7 @@ COPY --chown=sgn:sgn ./pyproject.toml ./poetry.lock* ./
 RUN pip install --no-cache poetry && \
     poetry config virtualenvs.create false
 
-RUN poetry install --no-root --no-dev && \
+RUN poetry install --no-root --only main && \
     rm -rf ~/.cache/{pip,pypoetry}
 
 # Copy app
