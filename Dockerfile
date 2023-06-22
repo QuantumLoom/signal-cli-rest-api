@@ -9,6 +9,7 @@ RUN set -eux; \
     mkdir -p /usr/share/man/man1; \
     apt-get update; \
     apt-get install --no-install-recommends -y \
+        ca-certificates \
         openjdk-17-jre-headless \
         wget \
         locales \
